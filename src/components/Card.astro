@@ -1,0 +1,83 @@
+---
+import "../css/general.css";
+
+const { data } = Astro.props;
+---
+
+<a href={`/projects/${data.slug}`}>
+  <article class="cardcontent">
+    <div class="cardheadcontainer">
+      <div class={`boxColor ${data.boxColor}`}></div>
+      <h4>//{data.title}</h4>
+    </div>
+
+    <p>{data.description1}</p>
+    <div class="btn">
+      <h5>see more</h5>
+    </div>
+  </article>
+  <hr />
+</a>
+
+<style>
+  a {
+    height: 8rem;
+  }
+  .cardheadcontainer {
+    display: grid;
+    grid-template-columns: 4rem auto;
+    gap: 1rem;
+  }
+  .boxColor {
+    aspect-ratio: 1/1;
+  }
+  .cardcontent {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+  h4 {
+    color: var(--secondary);
+    text-align: right;
+  }
+
+  /* boxColors */
+  .secondary {
+    background-color: var(--secondary);
+  }
+  .tertiary {
+    background-color: var(--tertiary);
+  }
+  .accent3 {
+    background-color: var(--accent3);
+  }
+
+  @media (min-width: 900px) {
+    .cardcontent {
+      display: grid;
+      grid-template-columns: 3fr 1fr 1fr;
+    }
+  }
+</style>
+
+<!-- button style -->
+<style>
+  .btn {
+    margin-bottom: auto;
+    margin-top: auto;
+  }
+  h5 {
+    background-color: var(--secondary);
+    border-radius: 5rem;
+    padding: 0.5rem 2rem;
+    max-width: fit-content;
+    transition: var(--unfocus);
+  }
+
+  a:hover h5 {
+    background-color: var(--tertiary);
+    color: var(--secondary);
+    transition: var(--focus);
+  }
+</style>

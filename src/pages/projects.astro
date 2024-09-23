@@ -1,0 +1,61 @@
+---
+import MainLayout from "../Layouts/MainLayout.astro";
+import "../css/general.css";
+
+import Card from "../components/Card.astro";
+
+const data = await fetch(`https://kxmqexnqozccamiawnbj.supabase.co/rest/v1/table1?`, {
+  method: "GET",
+  headers: {
+    apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imt4bXFleG5xb3pjY2FtaWF3bmJqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTg3MDQyNjIsImV4cCI6MjAzNDI4MDI2Mn0.9bmPlpp_agUnjY_gAe2RymTKggwDxzy8JT-XLQNNhRA",
+  },
+}).then((res) => res.json());
+console.log(data);
+---
+
+<MainLayout pagetitle="Projects" display="">
+  <div class="desktopgrid">
+    <div class="box1">
+      <h2>#LATEST <br />PROJECTS</h2>
+      <h4>my latest projects i've created in teams and alone</h4>
+    </div>
+  </div>
+  <hr />
+  {
+    data.map((work) => {
+      return <Card data={work} />;
+    })
+  }
+</MainLayout>
+
+<style>
+  .box1 {
+    padding-top: 20rem;
+
+    background: var(--gradient5);
+    margin-left: -6rem;
+    text-align: end;
+    margin-bottom: 4rem;
+  }
+  h2,
+  h4 {
+    color: var(--accent2);
+  }
+  h4 {
+    margin-top: 0.5rem;
+    margin-left: 8rem;
+  }
+  @media (min-width: 900px) {
+    .desktopgrid {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+    }
+    .box1 {
+      padding-top: 10rem;
+      padding-left: 5rem;
+      margin-left: -10rem;
+      text-align: end;
+      margin-bottom: 4rem;
+    }
+  }
+</style>

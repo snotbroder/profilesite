@@ -1,0 +1,27 @@
+---
+import "../css/general.css";
+const { href, text } = Astro.props;
+---
+
+<a href={href}>
+  <h5>{text}</h5>
+</a>
+
+<style>
+  a {
+    margin-top: 1rem;
+  }
+  h5 {
+    background-color: var(--secondary);
+    border-radius: 5rem;
+    padding: 1rem 2rem;
+    max-width: fit-content;
+    transition: var(--unfocus);
+  }
+
+  a:hover h5 {
+    background-color: var(--tertiary);
+    color: var(--secondary);
+    transition: var(--focus);
+  }
+</style>

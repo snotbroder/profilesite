@@ -1,0 +1,165 @@
+/* ------ css reset ------ */
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+@font-face {
+  font-family: "Druk Wide Bold Bold";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Druk Wide Bold Bold"), url("../Fonts/DrukWideBold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "STRETCH SANS";
+  font-style: normal;
+  font-weight: normal;
+  src: local("STRETCH SANS"), url("../Fonts/STRRETCH-SANS-FREE.woff") format("woff");
+}
+
+html {
+  scroll-behavior: smooth;
+
+  --primary: #2231eb;
+  --secondary: #ffa800;
+  --tertiary: #826586;
+
+  --accent1: #222222;
+  --accent2: #f9f8f1;
+  --accent3: #f97d9e;
+
+  background-color: var(--primary);
+
+  --focus: all 0.2s ease;
+  --unfocus: all 0.35s ease;
+  --gradient1: conic-gradient(from 90deg, var(--secondary), var(--accent1));
+  --gradient2: linear-gradient(90deg, var(--tertiary), var(--secondary));
+  --gradient3: linear-gradient(90deg, var(--primary), var(--secondary));
+  --gradient4: linear-gradient(90deg, var(--tertiary), var(--primary));
+  --gradient5: linear-gradient(90deg, var(--secondary), var(--primary));
+
+  a {
+    text-decoration: none;
+  }
+
+  ::selection {
+    background-color: var(--accent3);
+    color: var(--accent1);
+  }
+}
+
+.display {
+  font-family: "STRETCH SANS";
+  font-size: 96px;
+  text-transform: uppercase;
+  color: var(--accent1);
+}
+
+h1 {
+  font-family: "Druk Wide Bold Bold";
+  font-size: 64px;
+  color: var(--accent1);
+  text-transform: uppercase;
+  margin: 0;
+  margin-top: -1rem;
+  margin-bottom: -1rem;
+}
+h2 {
+  font-family: "Druk Wide Bold Bold";
+  font-size: 48px;
+  color: var(--accent1);
+  text-transform: uppercase;
+  margin: 0;
+  margin-top: -1rem;
+  margin-bottom: -1rem;
+}
+
+h3 {
+  font-family: "Work Sans", sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--accent1);
+  text-transform: uppercase;
+}
+
+h4 {
+  font-family: "Work Sans", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--accent1);
+  text-transform: uppercase;
+}
+
+h5 {
+  font-family: "Work Sans", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--accent1);
+  text-transform: uppercase;
+}
+
+p {
+  font-family: "Work Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--accent2);
+  font-size: 20px;
+}
+/* Desktop sizes */
+@media (min-width: 900px) {
+  .display {
+    font-family: "STRETCH SANS";
+    font-size: 80px;
+    letter-spacing: 1.5cqw;
+  }
+  h1 {
+    font-family: "Druk Wide Bold Bold";
+    font-size: 80px;
+  }
+  h2 {
+    font-family: "Druk Wide Bold Bold";
+    font-size: 64px;
+  }
+
+  h3 {
+    font-family: "Work Sans", sans-serif;
+    font-size: 48px;
+  }
+
+  h4 {
+    font-family: "Work Sans", sans-serif;
+    font-size: 36px;
+  }
+
+  h5 {
+    font-family: "Work Sans", sans-serif;
+    font-size: 24px;
+  }
+}
+
+a:hover .arrow {
+  margin-right: 0.5rem;
+  margin-left: -0.5rem;
+  color: var(--primary);
+  transition: var(--focus);
+}
+a .arrow {
+  transition: var(--unfocus);
+}
+
+hr {
+  width: 100%;
+  margin: 2rem 0 2rem 0;
+  background-color: var(--tertiary);
+  height: 2px;
+  border: none;
+}

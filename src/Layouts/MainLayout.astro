@@ -1,0 +1,82 @@
+---
+import Footer from "../components/Footer.astro";
+import Menu from "../components/Menu.astro";
+
+const { pagetitle, display } = Astro.props;
+import "../css/general.css";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{pagetitle}</title>
+
+    <link rel="stylesheet" href="/src/css/general.css" />
+    <link rel="stylesheet" href="/src/css/animation.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@100..900&display=swap" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div class="grid">
+      <div class="container1">
+        <h1 class="display">{display}</h1>
+      </div>
+      <main class="container2">
+        <slot />
+      </main>
+      <div class="container3">
+        <Menu />
+      </div>
+    </div>
+
+    <Footer />
+  </body>
+</html>
+
+<style>
+  .grid {
+    max-width: 100%;
+    /* display: grid; */
+    display: flex;
+    grid-template-columns: 1rem auto 1rem;
+    /* justify-content: space-between; */
+  }
+
+  .container1 {
+    position: fixed;
+    left: 0;
+    top: 25rem;
+
+    margin-top: -4rem;
+    transform: translateY(-10vh) translateX(-45%) rotate(-90deg); /* Adjust for rotation */
+  }
+
+  .container2 {
+    padding-left: 5rem;
+    order: -1;
+  }
+  .container3 {
+    z-index: 10;
+  }
+
+  @media (min-width: 900px) {
+    .grid {
+      display: grid;
+      grid-template-columns: auto 4rem;
+    }
+    .container1 {
+      top: 32rem;
+      transform: translateY(-10vh) translateX(-45%) rotate(-90deg); /* Adjust for rotation */
+    }
+    .container2 {
+      margin-left: 5rem;
+      padding-left: 5rem;
+    }
+  }
+</style>

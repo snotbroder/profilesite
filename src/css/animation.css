@@ -1,0 +1,62 @@
+.lr-anim {
+  animation-name: left-right-animation;
+  animation-duration: 25s;
+  animation-timing-function: linear;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+}
+@keyframes left-right-animation {
+  0% {
+    transform: translateX(-60vh);
+  }
+
+  50% {
+  }
+  100% {
+    transform: translateX(65vh);
+  }
+}
+
+.rl-anim {
+  animation-name: right-left-animation;
+  animation-duration: 20s;
+  animation-timing-function: linear;
+  animation-delay: 0.5s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+}
+@keyframes right-left-animation {
+  0% {
+    transform: translateX(60vh);
+  }
+  50% {
+  }
+  100% {
+    transform: translateX(-65vh);
+  }
+}
+
+.lr-anim-slow {
+  animation-name: left-right-slow-animation;
+  animation-duration: 35s;
+  animation-timing-function: linear;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+}
+@keyframes left-right-slow-animation {
+  0% {
+    transform: translateX(-60vh);
+  }
+  /* 50% {
+    transform: translateX(65vh);
+  } */
+  100% {
+    transform: translateX(65vh);
+  }
+}
+
+.delay1 {
+  animation-delay: -2s;
+}

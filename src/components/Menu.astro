@@ -1,0 +1,45 @@
+---
+import "../css/general.css";
+---
+
+<div class="menu-container">
+  <ul class="menu">
+    <li class="menupunkt">
+      <a href=""><h4>INDEX</h4></a>
+    </li>
+    <li class="menupunkt">
+      <a href=""><h4>ABOUT</h4></a>
+    </li>
+    <li class="menupunkt">
+      <a href=""><h4>PROJETCTS</h4></a>
+    </li>
+  </ul>
+</div>
+<style>
+  .menu-container {
+    height: 100%;
+    width: 100%;
+    background-color: var(--accent1);
+  }
+  .menu {
+    z-index: 5;
+    position: sticky;
+    top: 2%;
+
+    list-style: none;
+  }
+  .menupunkt {
+    h4 {
+      color: var(--accent2);
+      padding-top: 4rem;
+      margin: auto;
+      writing-mode: vertical-lr;
+    }
+  }
+
+  @media (min-width: 900px) {
+    .menu {
+      width: 4rem;
+    }
+  }
+</style>

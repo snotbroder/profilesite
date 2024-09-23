@@ -1,0 +1,25 @@
+---
+import "../css/general.css";
+---
+
+<section>
+  <figure>
+    <img src="/profile.png" alt="" />
+  </figure>
+</section>
+<style>
+  section {
+    background-color: var(--accent1);
+    padding: 2rem;
+
+    img {
+      width: 3rem;
+    }
+    img::after {
+      width: 4rem;
+      height: 4rem;
+      background: red;
+      z-index: 2;
+    }
+  }
+</style>
