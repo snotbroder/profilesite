@@ -22,7 +22,6 @@ html {
 body {
   margin: unset;
   min-height: 100svh;
-  background: var(--color-secondary-02);
 }
 
 ol[role="list"],
