@@ -5,13 +5,13 @@ import "../css/general.css";
 <div class="menu-container">
   <ul class="menu">
     <li class="menupunkt">
-      <a href=""><h4>INDEX</h4></a>
+      <a href="">INDEX</a>
     </li>
     <li class="menupunkt">
-      <a href=""><h4>ABOUT</h4></a>
+      <a href="">ABOUT</a>
     </li>
     <li class="menupunkt">
-      <a href=""><h4>PROJETCTS</h4></a>
+      <a href="">PROJETCTS</a>
     </li>
   </ul>
 </div>
@@ -27,12 +27,16 @@ import "../css/general.css";
     top: 2%;
 
     list-style: none;
+
+    margin: 0;
+    padding-top: auto;
+    padding-bottom: auto;
   }
   .menupunkt {
-    h4 {
+    > * {
       color: var(--accent2);
       padding-top: 4rem;
-      margin: auto;
+
       writing-mode: vertical-lr;
     }
   }
