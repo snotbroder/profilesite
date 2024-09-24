@@ -64,7 +64,8 @@ html {
 h1 {
   font-family: "Druk Wide Bold Bold";
   font-size: var(--step-6);
-  color: var(--accent1);
+  color: transparent;
+  -webkit-text-stroke: var(--accent2) 3px;
   text-transform: uppercase;
   margin: 0;
   margin-top: -1rem;

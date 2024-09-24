@@ -50,12 +50,16 @@ import "../css/general.css";
   }
 
   .container1 {
-    position: fixed;
+    position: absolute;
     left: 0;
     top: 25rem;
 
     margin-top: -4rem;
     transform: translateY(-10vh) translateX(-45%) rotate(-90deg); /* Adjust for rotation */
+    > * {
+      color: transparent;
+      -webkit-text-stroke: var(--accent1) 3px;
+    }
   }
 
   .container2 {
