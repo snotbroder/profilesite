@@ -24,64 +24,81 @@ import "../css/general.css";
   </head>
 
   <body>
-    <div class="grid">
-      <div class="container1">
-        <span class="display">{display}</span>
-      </div>
-      <main class="container2">
-        <slot />
-      </main>
-      <div class="container3">
-        <Menu />
-      </div>
-    </div>
+    
 
-    <Footer />
+    
+    <main>
+      <slot />
+    </main>
+    <div class="menubar">
+      <Menu />
+    </div>
+    <div class="footer">
+      <Footer />
+    </div>
   </body>
 </html>
 
 <style>
-  .grid {
-    max-width: 100%;
-    /* display: grid; */
-    display: flex;
-    grid-template-columns: 1rem auto 1rem;
-    /* justify-content: space-between; */
-  }
+  body {
+--content: minmax(0.5rem, 85ch);
 
-  .container1 {
-    position: absolute;
-    left: 0;
-    top: 25rem;
+display: grid;
+grid-template-columns: 
+[content-start] var(--content) [content-end]
+[menubar] minmax(2rem, 4rem);
 
-    margin-top: -4rem;
-    transform: translateY(-10vh) translateX(-45%) rotate(-90deg); /* Adjust for rotation */
-    > * {
-      color: transparent;
-      -webkit-text-stroke: var(--accent1) 3px;
-    }
-  }
 
-  .container2 {
-    padding-left: 5rem;
-    order: -1;
-  }
-  .container3 {
-    z-index: 10;
-  }
+> :first-child{
+  display: grid;
+  grid-column: display span;
+}
+main{
+  display: grid;
+  grid-column: content span;
+  grid-template-columns: subgrid;
 
-  @media (min-width: 900px) {
-    .grid {
+  section{
+    padding-right: 3rem;
+  }
+}
+
+.menubar{
+  display: grid;
+  grid-column: menubar;
+
+}
+
+.footer{
+  display: grid;
+  grid-column:  content span;
+}
+
+
+
+
+
+
+
+
+
+
+    /* .container1 {
+      position: absolute;
       display: grid;
-      grid-template-columns: auto 4rem;
-    }
-    .display {
-      top: 1rem;
-      transform: translateY(-10vh) translateX(-45%) rotate(-90deg); /* Adjust for rotation */
-    }
-    .container2 {
-      margin-left: 5rem;
-      padding-left: 5rem;
-    }
-  }
+      grid-template-columns: subgrid;
+      grid-column: content;
+      left: 0;
+      top: 25rem;
+
+      margin-top: -4rem;
+
+      > * {
+        color: transparent;
+        -webkit-text-stroke: var(--accent1) 3px;
+        transform: translateY(-10vh) translateX(-45%) rotate(-90deg);
+      }
+    } */
+
+
 </style>

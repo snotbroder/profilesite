@@ -32,17 +32,19 @@ html {
   --gradient3: linear-gradient(90deg, var(--primary), var(--secondary));
   --gradient4: linear-gradient(90deg, var(--tertiary), var(--primary));
   --gradient5: linear-gradient(90deg, var(--secondary), var(--primary));
+  --gradient6: linear-gradient(90deg, var(--secondary), var(--tertiary));
 
   a {
     text-decoration: none;
   }
 
   ::selection {
-    background-color: var(--accent3);
+    background-color: var(--tertiary);
     color: var(--accent1);
   }
 }
 :root {
+  /* typography */
   --step--2: clamp(0.7813rem, 0.7747rem + 0.0326vw, 0.8rem);
   --step--1: clamp(0.9375rem, 0.9158rem + 0.1087vw, 1rem);
   --step-0: clamp(1.125rem, 1.0815rem + 0.2174vw, 1.25rem);
@@ -52,6 +54,17 @@ html {
   --step-4: clamp(2.3328rem, 2.0827rem + 1.2504vw, 3.0518rem);
   --step-5: clamp(2.7994rem, 2.4462rem + 1.7658vw, 3.8147rem);
   --step-6: clamp(3.3592rem, 2.8691rem + 2.4507vw, 4.7684rem);
+
+  /* spacing */
+  --space-3xs: clamp(0.3125rem, -0.0136rem + 1.6304vw, 1.25rem);
+  --space-2xs: clamp(0.5625rem, -0.1114rem + 3.3696vw, 2.5rem);
+  --space-xs: clamp(0.875rem, -0.125rem + 5vw, 3.75rem);
+  --space-s: clamp(1.125rem, -0.2228rem + 6.7391vw, 5rem);
+  --space-m: clamp(1.6875rem, -0.3342rem + 10.1087vw, 7.5rem);
+  --space-l: clamp(2.25rem, -0.4457rem + 13.4783vw, 10rem);
+  --space-xl: clamp(3.375rem, -0.6685rem + 20.2174vw, 15rem);
+  --space-2xl: clamp(4.5rem, -0.8913rem + 26.9565vw, 20rem);
+  --space-3xl: clamp(6.75rem, -1.337rem + 40.4348vw, 30rem);
 }
 
 .display {
@@ -67,14 +80,22 @@ h1 {
   color: transparent;
   -webkit-text-stroke: var(--accent2) 3px;
   text-transform: uppercase;
-  margin: 0;
+  padding: var(--space-2xs);
   margin-top: -1rem;
   margin-bottom: -1rem;
+  word-break: break-all;
+
+  &::before {
+    content: "<";
+  }
+  &::after {
+    content: ">";
+  }
 }
 h2 {
   font-family: "Druk Wide Bold Bold";
   font-size: var(--step-5);
-  color: var(--accent1);
+  color: var(--accent2);
   text-transform: uppercase;
   margin: 0;
   margin-top: -1rem;
@@ -130,4 +151,47 @@ hr {
   background-color: var(--tertiary);
   height: 2px;
   border: none;
+}
+
+/* Flowspace */
+.flow > * + * {
+  /* margin-block-start: var(--space-m); */
+  margin-block-start: var(--flow-space, var(--space-s));
+
+  h2 + h3 {
+    --flow-space: var(--space-s);
+  }
+}
+
+.flow-light > * + * {
+  /* margin-block-start: var(--space-m); */
+  margin-block-start: var(--flow-space, var(--space-xs));
+
+  h2 + h3 {
+    --flow-space: var(--space-2xs);
+  }
+}
+
+@media (min-width: 900px) {
+  .grid1-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .grid2-3 {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+  }
+}
+
+@media (max-width: 900px) {
+  /* Mobileflow */
+  .flow-mobile > * + * {
+    /* margin-block-start: var(--space-m); */
+    margin-block-start: var(--flow-space, var(--space-xs));
+
+    h2 + h3 {
+      --flow-space: var(--space-2xs);
+    }
+  }
 }

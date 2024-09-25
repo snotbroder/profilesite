@@ -2,24 +2,71 @@
 import "../css/general.css";
 ---
 
-<section>
-  <figure>
-    <img src="/profile.png" alt="" />
-  </figure>
-</section>
-<style>
-  section {
-    background-color: var(--accent1);
-    padding: 2rem;
+<section class="flow">
+  <h1>about</h1>
+  <div class="wrapper grid2-3 flow-mobile">
+    <div class="profilepic">
+      <img src="/profile1.webp" alt="profile of me" />
+    </div>
+    <div class="txt-wrapper flow-light">
+      <h2>#who am i?</h2>
+      <p>Hello I’m Joris! I’m a student at the Copenhagen School of Design and Technology, aka. KEA. I am currently looking for an internship for my upcoming 4th semester of Multimediadesign AP.</p>
+      <p>I love to code. My favourite part about coding websites is translating designs into a usable interface. This is also why I chose the Frontend-development course for my 3rd semester - to explore and expand my coding skills. This is also what I would expect for this upcoming semester.</p>
+      <p>When not in school, I’m at home in Vesterbro, with my dog and my partner. And if not that, I may be out with my friends talking about pop-culture or having a beer.</p>
+    </div>
+  </div>
+  <div class="ff-container">
+    <span class="ff">I love 90's music!</span>
+    <span class="ff">You can't spell fun without frontend development</span>
+    <span class="ff">My favorite meal is tomatosoup on a cold day</span>
+  </div>
+  <style>
+    section {
+      background: var(--gradient6);
+      padding: var(--space-2xs) var(--space-s);
 
-    img {
-      width: 3rem;
+      .profilepic {
+        display: grid;
+        width: fit-content;
+        height: fit-content;
+        border: 2px solid var(--accent1);
+
+        img {
+          display: block;
+          object-fit: cover;
+          grid-area: 1/1;
+          aspect-ratio: 1/1;
+        }
+        &:hover {
+          :first-child {
+            opacity: 0;
+          }
+          background-image: url(/public/profile2.webp);
+          background-size: cover;
+          aspect-ratio: 1/1;
+          width: fit-content;
+        }
+
+        :first-child {
+          z-index: 1;
+        }
+      }
+      /* .profilepic:after {
+        display: block;
+        content: "";
+        background: url(/public/grid1.svg);
+
+        width: 10rem;
+        aspect-ratio: 1/1;
+        position: relative;
+        top: -20rem;
+        left: 0;
+        z-index: 1;
+      } */
     }
-    img::after {
-      width: 4rem;
-      height: 4rem;
-      background: red;
-      z-index: 2;
+
+    .wrapper {
+      gap: var(--space-2xs);
     }
-  }
-</style>
+  </style>
+</section>
