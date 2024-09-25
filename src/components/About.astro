@@ -25,6 +25,18 @@ import "../css/general.css";
       background: var(--gradient6);
       padding: var(--space-2xs) var(--space-s);
 
+      .wrapper:after {
+        display: block;
+        content: "";
+        background: url(/public/grid1.svg);
+        transform: rotate(180deg);
+        width: 20%;
+        aspect-ratio: 1/1;
+        position: absolute;
+        top: 20rem;
+        left: -3rem;
+      }
+
       .profilepic {
         display: grid;
         width: fit-content;
@@ -45,24 +57,13 @@ import "../css/general.css";
           background-size: cover;
           aspect-ratio: 1/1;
           width: fit-content;
+          z-index: 20;
         }
 
         :first-child {
           z-index: 1;
         }
       }
-      /* .profilepic:after {
-        display: block;
-        content: "";
-        background: url(/public/grid1.svg);
-
-        width: 10rem;
-        aspect-ratio: 1/1;
-        position: relative;
-        top: -20rem;
-        left: 0;
-        z-index: 1;
-      } */
     }
 
     .wrapper {
