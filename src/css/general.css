@@ -29,7 +29,7 @@ html {
   --unfocus: all 0.35s ease;
   --gradient1: conic-gradient(from 90deg, var(--secondary), var(--accent1));
   --gradient2: linear-gradient(90deg, var(--tertiary), var(--secondary));
-  --gradient3: linear-gradient(90deg, var(--primary), var(--secondary));
+  --gradient3: linear-gradient(90deg, var(--primary), var(--primary), var(--secondary));
   --gradient4: linear-gradient(90deg, var(--tertiary), var(--primary));
   --gradient5: linear-gradient(90deg, var(--secondary), var(--primary));
   --gradient6: linear-gradient(90deg, var(--secondary), var(--tertiary));
@@ -125,6 +125,13 @@ h5 {
   color: var(--accent1);
   text-transform: uppercase;
 }
+h6 {
+  font-family: "Work Sans", sans-serif;
+  font-size: var(--step-0);
+  font-weight: 700;
+  color: var(--accent2);
+  text-transform: uppercase;
+}
 
 p {
   font-family: "Work Sans", sans-serif;
@@ -181,6 +188,10 @@ hr {
   .grid2-3 {
     display: grid;
     grid-template-columns: 2fr 3fr;
+  }
+  .grid1-3 {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
   }
 }
 

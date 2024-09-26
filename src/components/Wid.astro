@@ -1,0 +1,96 @@
+---
+
+---
+
+<section>
+  <h1>what_i_do</h1>
+  <div class="grid2-3">
+    <table class="languages">
+      <tr>
+        <th>Languages</th>
+        <th></th>
+      </tr>
+      <tr> <td>DANSK (Modersmål)</td> <td class="stars"> <img src="/public/Star_full.svg" alt="star icon" /><img src="/public/Star_full.svg" alt="star icon" /><img src="/public/Star_full.svg" alt="star icon" /></td> </tr>
+      <tr> <td>NEDERLANDS (Belangrijk!)</td> <td class="stars"> <img src="/public/Star_full.svg" alt="star icon" /><img src="/public/Star_full.svg" alt="star icon" /><img src="/public/Star_full.svg" alt="star icon" /></td> </tr>
+      <tr> <td>ENGLISH (Also important)</td> <td class="stars"> <img src="/public/Star_full.svg" alt="star icon" /><img src="/public/Star_full.svg" alt="star icon" /><img src="/public/Star_full.svg" alt="star icon" /></td> </tr>
+      <tr> <td>DEUTCH (Natürlich)</td><td class="stars"> <img src="/public/Star_full.svg" alt="star icon" /><img src="/public/Star_half.svg" alt="star icon" /><img src="/public/Star_empty.svg" alt="star icon" /></td> </tr>
+      <tr> <td>ESPAñOL (Vale)</td> <td class="stars"> <img src="/public/Star_full.svg" alt="star icon" /><img src="/public/Star_empty.svg" alt="star icon" /><img src="/public/Star_empty.svg" alt="star icon" /></td></tr>
+    </table>
+
+    <div class="table-wrapper">
+      <table>
+        <tr><th>code</th><td>HTML</td><td>CSS</td><td>JS</td></tr>
+        <tr><th>frameworks</th><td>React.JS</td><td>Astro</td><td></td></tr>
+        <tr><th>tools</th><td>figma</td><td>Illustrator</td><td>GIT</td></tr>
+      </table>
+      <table>
+        <tr><th>strenghts</th><td>translating design</td><td>detail oriented</td><td>working in teams</td></tr>
+        <tr><th>weakness</th><td>combat video games</td><td>content creation</td><td>image editing</td></tr>
+      </table>
+    </div>
+  </div>
+  <h6>#Recent projects</h6>
+  <div class="grid2-3">
+    <div class="txt1">
+      <p>I have done a couple projects, that have heavely relied on designing a new interface. The latest of which was my exam for the 2nd semester. In a group of 4, we completely redesigned the current website of Jesper Kongshaug, giving it a new identity and implementing components on his request. This was built using frameworks, a database and usertesting.</p>
+    </div>
+    <div class="txt2 flow-light">
+      <p>Furthermore, for my individual exam, i did some tweaking to the group solution. Implementing the main content to a single page, and made small but noticeable designtweaks.</p>
+      <p>And, now the summer has passed, I already see flaws and room for improvement in this design - such as more consistent spacing, or more dynamic transitions between viewports. But this is the stuff I learn through trying.</p>
+    </div>
+  </div>
+</section>
+
+<style>
+  section {
+    background: var(--gradient3);
+    padding: var(--space-2xs) var(--space-s);
+  }
+  h1 {
+    margin-left: auto;
+  }
+  .grid2-3 {
+    gap: var(--space-2xs);
+  }
+
+  table {
+    color: var(--accent2);
+
+    th {
+      border-right: var(--accent2) 2px solid;
+      border-bottom: var(--accent2) 2px solid;
+      font-size: var(--step-0);
+      text-align: left;
+      padding-top: var(--space-3xs);
+      text-transform: uppercase;
+      hyphens: auto;
+      word-break: break-all;
+      font-family: "Work Sans", sans-serif;
+    }
+    tr td {
+      padding-top: var(--space-2xs);
+      padding-bottom: var(--space-2xs);
+      border-right: var(--accent2) 2px solid;
+      border-bottom: var(--accent2) 2px solid;
+      font-family: "Work Sans", sans-serif;
+    }
+    tr:first-child {
+      width: 1rem;
+    }
+  }
+  .table-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  img {
+    aspect-ratio: 1/1;
+    width: 2rem;
+  }
+  .stars {
+    display: flex;
+    justify-content: space-around;
+    height: auto;
+  }
+</style>
