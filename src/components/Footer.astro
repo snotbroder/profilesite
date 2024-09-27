@@ -4,9 +4,9 @@ import "../css/general.css";
 
 <section>
   <div class="flex">
-    <a href="/"><h4>#index <span class="arrow">&#10132;</span></h4></a>
-    <a href="/projects"><h4>#latest projects <span class="arrow">&#10132;</span></h4></a>
-    <a href="/about"><h4>#about <span class="arrow">&#10132;</span></h4></a>
+    <a href="/"><h4>#index</h4></a>
+    <a href="/projects"><h4>#latest projects</h4></a>
+    <a href="/about"><h4>#about</h4></a>
   </div>
   <h2>&copy;joris ten voorde</h2>
 </section>
@@ -21,7 +21,26 @@ import "../css/general.css";
     background: var(--gradient1);
 
     padding: 3rem 0 0 6rem;
-    overflow-y: hidden;
+    /* overflow-y: hidden; */
+    position: relative;
+    margin-top: var(--space-m);
+
+    &::after {
+      display: block;
+      content: "";
+      background: url(/dog.webp);
+      background-size: cover;
+      transform: scalex(-1);
+      background-repeat: no-repeat;
+      width: 40%;
+      height: 80%;
+      aspect-ratio: 1/1;
+      position: absolute;
+      top: -15rem;
+      left: 2%;
+
+      z-index: -1;
+    }
   }
   .flex {
     display: flex;
@@ -30,6 +49,11 @@ import "../css/general.css";
   }
   h2 {
     text-align: end;
+    color: transparent;
+    -webkit-text-stroke: var(--accent2) 3px;
+
+    margin: 0;
+    padding: 0;
   }
   h4 {
     color: var(--accent2);
