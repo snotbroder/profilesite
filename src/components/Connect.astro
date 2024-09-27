@@ -6,12 +6,35 @@
   <div class="header-wrapper grid3-1">
     <h1>connect_with_me</h1>
   </div>
-  <p>I hope to find a great match with a company that expects a fresh and fun intern. I am ready to learn and explore this industry through the eyes of a profesional</p>
+  <div class="grid1-1">
+    <div class="txt-wrapper">
+      <h6>#LET ME KNOW!</h6>
+      <p>I hope to find a great match with a company that expects a fresh and fun intern. I am ready to learn and explore this industry through the eyes of a professional.</p>
+    </div>
+    <div class="link-wrapper">
+      <h6>#LINKS</h6>
+      <ul class="">
+        <li>
+          <a target="_blank" href="https://github.com/snotbroder">GITHUB ACCOUNT</a>
+        </li>
+        <li>
+          <a target="_blank" href="https://github.com/snotbroder/profilesite">THIS GITHUB REP.</a>
+        </li>
+        <li>
+          <a target="_blank" href="https://linkedin.com/in/joris-ten-voorde-266678202">MESSAGE ME ON LINKEDIN</a>
+        </li>
+        <li>
+          <a target="_blank" href="mailto:jote0002@stud.kea.dk">EMAIL ME</a>
+        </li>
+      </ul>
+    </div>
+  </div>
 </section>
 
 <style>
   section {
     padding: var(--space-2xs) var(--space-s);
+
     .header-wrapper::after {
       display: block;
       content: "";
@@ -23,6 +46,15 @@
 
       left: 0rem;
       z-index: -1;
+    }
+    .grid1-1 {
+      gap: var(--space-2xs);
+    }
+    ul > * {
+      padding-bottom: var(--space-2xs);
+      &:last-child {
+        padding-bottom: var(--space-s);
+      }
     }
   }
 </style>
