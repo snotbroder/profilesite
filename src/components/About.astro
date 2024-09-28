@@ -3,7 +3,7 @@ import "../css/general.css";
 ---
 
 <section class="flow">
-  <h1>about</h1>
+  <h1 id="about">about</h1>
   <div class="wrapper grid2-3 flow-mobile">
     <div class="profilepic">
       <img src="/profile1.webp" alt="profile of me" />
@@ -24,17 +24,18 @@ import "../css/general.css";
     section {
       background: var(--gradient6);
       padding: var(--space-2xs) var(--space-s);
+      position: relative;
 
       .wrapper:after {
         display: block;
         content: "";
 
         background: url(/grid3.svg);
-        transform: rotate(0deg);
-        width: 20%;
+        transform: rotate(90deg);
+        width: 15rem;
         aspect-ratio: 1/1;
         position: absolute;
-        top: 20rem;
+        top: 11rem;
         left: -3rem;
       }
 
@@ -49,6 +50,8 @@ import "../css/general.css";
           object-fit: cover;
           grid-area: 1/1;
           aspect-ratio: 1/1;
+          transition: var(--hover);
+          z-index: 10;
         }
         &:hover {
           :first-child {

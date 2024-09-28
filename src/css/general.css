@@ -34,6 +34,7 @@ html {
   --gradient5: linear-gradient(90deg, var(--secondary), var(--primary));
   --gradient6: linear-gradient(90deg, var(--secondary), var(--tertiary));
   --gradient7: linear-gradient(0deg, var(--primary) 0%, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0) 80%, var(--primary) 100%);
+  --gradient8: linear-gradient(0deg, var(--secondary) 0%, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0) 80%, var(--secondary) 100%);
 
   ::selection {
     background-color: var(--tertiary);
@@ -68,8 +69,9 @@ html {
   font-family: "STRETCH SANS";
   font-size: 96px;
   text-transform: uppercase;
-  -webkit-text-stroke: var(--secondary) 4px;
+  -webkit-text-stroke: var(--accent1) 4px;
   color: transparent;
+  margin: 0;
 }
 
 h1 {
@@ -147,6 +149,7 @@ a {
 a:hover,
 a::selection {
   color: var(--secondary);
+  transition: var(--hover);
 }
 a:active {
   color: var(--accent2);
@@ -193,6 +196,10 @@ hr {
   .grid1-1 {
     display: grid;
     grid-template-columns: 1fr 1fr;
+  }
+  .grid2-1 {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
   }
 
   .grid2-3 {

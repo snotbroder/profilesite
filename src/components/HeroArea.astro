@@ -1,63 +1,123 @@
 ---
-
+import "../css/animation.css";
 ---
 
-<section class="">
+<!-- <h1 class="display">profile</h1> -->
+<section>
   <h1 class="">joris_ten<br />_voorde</h1>
 
-  <div class="grid5-2">
+  <div class="grid2-1">
     <div class="box1">
-      <h6>frontend development student</h6>
+      <h5>frontend development student</h5>
       <div class="links">
-        <a href="#">#LINK</a>
-        <a href="#">#LINK</a>
-        <a href="#">#LINK</a>
+        <a href="#about"><h6>#ABOUT</h6></a>
+        <a href="#wid"><h6>#WHAT_I_DO</h6></a>
+        <a href="#connect"><h6>#CONNECT</h6></a>
       </div>
     </div>
     <div class="box2">
+      <div class="frontgradient"></div>
       <div class="animcontent">
-        <a href="#">#LINK</a>
-        <a href="#">#LINK</a>
-        <a href="#">#LINK</a>
+        <div class="rl-anim">LOOKING FOR INTERNSHIP</div>
       </div>
     </div>
   </div>
-</section>
-<style>
-  section {
-    padding-top: var(--space-l);
-
-    h1 {
-      place-items: center;
+  <style>
+    .display {
+      transform: translateY(-10vh) translateX(-45%) rotate(-90deg);
+      z-index: 10;
     }
-  }
-  .box1 {
-    background: var(--gradient3);
-    place-self: end;
-    h6 {
-      margin: 0;
-    }
+    section {
+      padding-top: var(--space-l);
+      position: relative;
 
-    .links {
-      padding: var(--space-s);
-      display: flex;
-      flex-direction: column;
-      place-items: end;
-      justify-content: space-between;
-      > * {
-        padding-bottom: var(--space-2xs);
+      h1 {
+        /* text-align: center; */
+        padding-left: var(--space-2xl);
+        /* padding-right: var(--space-xl); */
+        -webkit-text-stroke: var(--secondary) 4px;
       }
     }
-  }
-  .box2 {
-    background: var(--gradient7);
 
-    z-index: 10;
-    .animcontent {
-      height: 100%;
-      z-index: -2;
+    section::after {
+      display: block;
+      content: "";
+
+      background: url(/grid2.svg);
+      background-size: cover;
+      transform: rotate(0);
+      width: 25rem;
+      aspect-ratio: 1/1;
+      position: absolute;
+      top: -5rem;
+      right: 0rem;
+      z-index: -1;
     }
-  }
-  @media (min-width: 900px) {
-  }
-</style>
+    .box1 {
+      background: var(--gradient3);
+
+      h5 {
+        text-align: right;
+        margin-top: 0;
+        color: var(--accent2);
+      }
+
+      .links {
+        padding: var(--space-s);
+        display: flex;
+        flex-direction: column;
+        place-items: end;
+        justify-content: space-between;
+        > * {
+          h6 {
+            margin: 0;
+          }
+
+          margin-bottom: var(--space-2xs);
+        }
+      }
+    }
+    .box1::after {
+      display: block;
+      content: "";
+
+      background: url(/grid2.svg);
+      background-size: cover;
+      transform: rotate(180deg);
+      width: 30%;
+      aspect-ratio: 1/1;
+      position: absolute;
+      top: 70%;
+      left: 0rem;
+      z-index: 0;
+    }
+
+    .box2 {
+      display: grid;
+      z-index: -5;
+      place-items: center;
+
+      position: relative;
+      .animcontent,
+      .frontgradient {
+        grid-area: 1/1;
+        position: absolute;
+      }
+      .animcontent {
+        background: var(--gradient8);
+        height: 100%;
+        width: 100%;
+        > * {
+          z-index: -1;
+        }
+      }
+      .frontgradient {
+        z-index: 10;
+        height: 100%;
+        width: 100%;
+      }
+    }
+    @media (min-width: 900px) {
+    }
+  </style>
+</section>
