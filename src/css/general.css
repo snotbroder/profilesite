@@ -33,6 +33,7 @@ html {
   --gradient4: linear-gradient(90deg, var(--tertiary), var(--primary));
   --gradient5: linear-gradient(90deg, var(--secondary), var(--primary));
   --gradient6: linear-gradient(90deg, var(--secondary), var(--tertiary));
+  --gradient7: linear-gradient(0deg, var(--primary) 0%, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0) 80%, var(--primary) 100%);
 
   ::selection {
     background-color: var(--tertiary);
@@ -67,7 +68,8 @@ html {
   font-family: "STRETCH SANS";
   font-size: 96px;
   text-transform: uppercase;
-  color: var(--accent1);
+  -webkit-text-stroke: var(--secondary) 4px;
+  color: transparent;
 }
 
 h1 {
@@ -202,6 +204,10 @@ hr {
     grid-template-columns: 1fr 3fr;
   }
   .grid3-1 {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+  }
+  .grid5-2 {
     display: grid;
     grid-template-columns: 3fr 1fr;
   }

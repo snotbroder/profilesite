@@ -2,10 +2,62 @@
 
 ---
 
-<section class="content">
-  <h1>hej</h1>
+<section class="">
+  <h1 class="">joris_ten<br />_voorde</h1>
+
+  <div class="grid5-2">
+    <div class="box1">
+      <h6>frontend development student</h6>
+      <div class="links">
+        <a href="#">#LINK</a>
+        <a href="#">#LINK</a>
+        <a href="#">#LINK</a>
+      </div>
+    </div>
+    <div class="box2">
+      <div class="animcontent">
+        <a href="#">#LINK</a>
+        <a href="#">#LINK</a>
+        <a href="#">#LINK</a>
+      </div>
+    </div>
+  </div>
 </section>
 <style>
+  section {
+    padding-top: var(--space-l);
+
+    h1 {
+      place-items: center;
+    }
+  }
+  .box1 {
+    background: var(--gradient3);
+    place-self: end;
+    h6 {
+      margin: 0;
+    }
+
+    .links {
+      padding: var(--space-s);
+      display: flex;
+      flex-direction: column;
+      place-items: end;
+      justify-content: space-between;
+      > * {
+        padding-bottom: var(--space-2xs);
+      }
+    }
+  }
+  .box2 {
+    background: var(--gradient7);
+
+    z-index: 10;
+    .animcontent {
+      height: 100%;
+      z-index: -2;
+    }
+  }
   @media (min-width: 900px) {
   }
 </style>
