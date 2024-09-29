@@ -64,3 +64,17 @@
 :root {
   --hover: ease 0.2s all;
 }
+
+.in-viewport {
+  animation: fadeInUp 1s ease-out forwards; /* Adjust duration and easing as needed */
+}
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(2rem); /* Moves the element 2rem down initially */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* Moves the element to its original position */
+  }
+}

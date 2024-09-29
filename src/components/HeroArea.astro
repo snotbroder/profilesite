@@ -10,9 +10,9 @@ import "../css/animation.css";
     <div class="box1">
       <h5>frontend development student</h5>
       <div class="links">
-        <a href="#about"><h6>#ABOUT</h6></a>
-        <a href="#wid"><h6>#WHAT_I_DO</h6></a>
-        <a href="#connect"><h6>#CONNECT</h6></a>
+        <a href="#about">#ABOUT</a>
+        <a href="#wid">#WHAT_I_DO</a>
+        <a href="#connect">#CONNECT</a>
       </div>
     </div>
     <div class="box2">
@@ -69,9 +69,11 @@ import "../css/animation.css";
         place-items: end;
         justify-content: space-between;
         > * {
-          h6 {
-            margin: 0;
-          }
+          font-family: "Work Sans", sans-serif;
+          font-size: var(--step-0);
+          font-weight: 700;
+          color: var(--accent2);
+          text-transform: uppercase;
 
           margin-bottom: var(--space-2xs);
         }

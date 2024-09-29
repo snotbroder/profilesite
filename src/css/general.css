@@ -15,8 +15,11 @@
 html {
   scroll-behavior: smooth;
 
-  --primary: #2231eb;
-  --secondary: #ffa800;
+  /* --primary: #2231eb; 
+    --secondary: #ffa800;*/
+  --primary: #1c2a93;
+  --secondary: #ccc8bc;
+
   --tertiary: #826586;
 
   --accent1: #222222;
@@ -69,7 +72,7 @@ html {
   font-family: "STRETCH SANS";
   font-size: 96px;
   text-transform: uppercase;
-  -webkit-text-stroke: var(--accent1) 4px;
+  -webkit-text-stroke: var(--accent2) 4px;
   color: transparent;
   margin: 0;
 }
@@ -230,4 +233,12 @@ hr {
       --flow-space: var(--space-2xs);
     }
   }
+}
+
+.viewable,
+h2,
+h6,
+p,
+.profilepic {
+  opacity: 0;
 }

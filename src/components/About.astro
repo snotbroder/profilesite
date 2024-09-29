@@ -1,5 +1,6 @@
 ---
 import "../css/general.css";
+import "../css/animation.css";
 ---
 
 <section class="flow">
@@ -20,6 +21,7 @@ import "../css/general.css";
     <span class="ff">You can't spell fun without frontend development</span>
     <span class="ff">My favorite meal is tomatosoup on a cold day</span>
   </div>
+  <script src="/src/js/viewtransition.js"></script>
   <style>
     section {
       background: var(--gradient6);
@@ -44,6 +46,7 @@ import "../css/general.css";
         width: fit-content;
         height: fit-content;
         border: 2px solid var(--accent1);
+        z-index: 20;
 
         img {
           display: block;

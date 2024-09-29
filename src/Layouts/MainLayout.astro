@@ -6,6 +6,8 @@ const { pagetitle, display } = Astro.props;
 import "../css/reset.css";
 import "../css/general.css";
 import "../css/animation.css";
+
+
 ---
 
 <html lang="en">
@@ -18,6 +20,8 @@ import "../css/animation.css";
 
     <link rel="stylesheet" href="/src/css/general.css" />
     <link rel="stylesheet" href="/src/css/animation.css" />
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -37,7 +41,10 @@ import "../css/animation.css";
     <div class="footer">
       <Footer />
     </div>
+    
   </body>
+  
+ 
 </html>
 
 <style>
@@ -72,6 +79,7 @@ main{
   grid-column:  content span;
 }
 
+overflow-x: hidden;
 
 
     /* .container1 {
