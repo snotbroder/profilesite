@@ -50,11 +50,15 @@ import "../css/animation.css";
 <style>
   body {
 --content: minmax(0.5rem, 85ch);
+/* --menubar: minmax(2rem, 4rem); */
+--menubar: 1rem;
+
+
 
 display: grid;
 grid-template-columns: 
 [content-start] var(--content) [content-end]
-[menubar] minmax(2rem, 4rem);
+[menubar] var(--menubar);
 
 
 > :first-child{

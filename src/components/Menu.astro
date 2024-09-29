@@ -5,13 +5,13 @@ import "../css/general.css";
 <div class="menu-container">
   <ul class="menu">
     <li class="menupunkt">
-      <a href="">INDEX</a>
+      <a href="#about">#ABOUT</a>
     </li>
     <li class="menupunkt">
-      <a href="">ABOUT</a>
+      <a href="#wid">#WHAT I DO</a>
     </li>
     <li class="menupunkt">
-      <a href="">PROJETCTS</a>
+      <a href="#connect">#CONNECT</a>
     </li>
   </ul>
 </div>
@@ -27,9 +27,7 @@ import "../css/general.css";
 
     list-style: none;
 
-    margin: 0;
-    padding-top: auto;
-    padding-bottom: auto;
+    padding: 1rem;
   }
   .menupunkt {
     > * {
@@ -37,6 +35,11 @@ import "../css/general.css";
       padding-top: 4rem;
 
       writing-mode: vertical-lr;
+      font-family: "Work Sans", sans-serif;
+      font-size: var(--step-0);
+      font-weight: 700;
+      color: var(--accent2);
+      text-transform: uppercase;
     }
   }
 
