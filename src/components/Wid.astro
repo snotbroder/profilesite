@@ -7,12 +7,23 @@
   <h6>#Recent projects</h6>
   <div class="grid2-3">
     <div class="txt1">
-      <p>I have done a couple projects, that have heavely relied on designing a new interface. The latest of which was my exam for the 2nd semester. In a group of 4, we completely redesigned the current website of Jesper Kongshaug, giving it a new identity and implementing components on his request. This was built using frameworks, a database and usertesting.</p>
+      <p>I have done a couple projects, that have heavely relied on designing a new interface. The latest of which was my exam for the 2nd semester. In a group of 4, we <a target="_blank" href="https://jesperkongshaug.netlify.app/"> completely redesigned&#8599;</a> the <a target="_blank" href="https://www.jesperkongshaug.com/"> current website&#8599;</a> of Jesper Kongshaug, giving it a new identity and implementing components on his request. This was developed using frameworks, a database and usertesting.</p>
+      <p>During this project, my task was to manage the team, and assign tasks and keep contact with guidance and our client.</p>
     </div>
     <div class="txt2 flow-light">
-      <p>Furthermore, for my individual exam, i did some tweaking to the group solution. Implementing the main content to a single page, and made small but noticeable designtweaks.</p>
-      <p>And, now the summer has passed, I already see flaws and room for improvement in this design - such as more consistent spacing, or more dynamic transitions between viewports. But this is the stuff I learn through trying.</p>
+      <p>Furthermore, for my individual exam, <a target="_blank" href="https://lightingdesign.netlify.app/">i did some tweaking&#8599;</a> to the group solution. Implementing the main content to a single page, and made small but noticeable designtweaks.</p>
+      <p>And, now the summer has passed, I already see flaws and room for improvement in this design - such as more consistent spacing, or more dynamic transitions between viewports. But this is the stuff I learn through iterations.</p>
     </div>
+  </div>
+  <div class="grid1-1">
+    <figure>
+      <img class="media" src="/public/kongshaug1.webp" alt="website before our solution" />
+      <span>Current solution</span>
+    </figure>
+    <figure>
+      <img class="media" src="/public/kongshaug2.webp" alt="website after our solution" />
+      <span>Our solution</span>
+    </figure>
   </div>
   <div class="grid2-3">
     <table class="languages">
@@ -74,6 +85,8 @@
       border-right: var(--accent2) 2px solid;
       border-bottom: var(--accent2) 2px solid;
       font-family: "Work Sans", sans-serif;
+      text-transform: capitalize;
+      text-align: center;
     }
     tr:first-child {
       width: 1rem;
@@ -85,7 +98,7 @@
     justify-content: space-between;
   }
 
-  img {
+  .stars img {
     aspect-ratio: 1/1;
     width: 2rem;
   }
@@ -93,5 +106,19 @@
     display: flex;
     justify-content: space-around;
     height: auto;
+  }
+
+  .grid1-1 {
+    gap: var(--space-2xs);
+    padding-bottom: var(--space-2xs);
+  }
+  .media {
+    border: 2px solid var(--accent1);
+  }
+
+  figure span {
+    color: var(--accent2);
+    font-style: italic;
+    padding-top: var(--space-2xs);
   }
 </style>
