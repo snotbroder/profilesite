@@ -1,0 +1,16 @@
+            - name: Astro Check
+  # You may pin to the exact commit or the version.
+  # uses: radenpioneer/astro-check@abb4ec095ab8b900fb29fb975dafd57fa4db38d8
+  uses: radenpioneer/astro-check@v0.1.2
+  with:
+    # Path of the directory containing your site
+    path: # optional, default is .
+    # The node version to use
+    node-version: # optional, default is 18
+    # If not automatically detectable, you may specify your preferred package manager
+    package-manager: # optional, default is 
+    # If the dependency file is located inside the folder specified by path
+    resolve-dep-from-path: # optional, default is true
+    # Your supplied check command, defined in `package.json` Defaults to `check`.
+    check-command: # default is check
+          
