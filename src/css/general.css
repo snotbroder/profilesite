@@ -30,7 +30,7 @@ html {
 
   --focus: all 0.2s ease;
   --unfocus: all 0.35s ease;
-  --gradient1: conic-gradient(from 90deg, var(--secondary), var(--accent1));
+  --gradient1: conic-gradient(from 90deg, var(--secondary), var(--tertiary));
   --gradient2: linear-gradient(90deg, var(--tertiary), var(--secondary));
   --gradient3: linear-gradient(90deg, var(--primary), var(--primary), var(--secondary));
   --gradient4: linear-gradient(90deg, var(--tertiary), var(--primary));
@@ -41,7 +41,7 @@ html {
 
   ::selection {
     background-color: var(--tertiary);
-    color: var(--accent1);
+    color: var(--accent2);
   }
 }
 :root {
