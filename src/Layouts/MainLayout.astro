@@ -54,7 +54,7 @@ import "../css/animation.css";
 display: grid;
 grid-template-columns: 
 [content-start] var(--content) [content-end]
-[menubar] minmax(2rem, 4rem);
+[menubar] 4rem;
 
 
 > :first-child{
@@ -66,12 +66,14 @@ main{
   grid-column: content span;
   grid-template-columns: subgrid;
 
+
+
 }
 
 .menubar{
   display: grid;
   grid-column: menubar;
-
+max-width: 4rem;
 }
 
 .footer{
