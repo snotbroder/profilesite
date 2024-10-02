@@ -18,7 +18,11 @@ import "../css/animation.css";
     <div class="box2">
       <div class="frontgradient"></div>
       <div class="animcontent">
-        <div class="rl-anim">LOOKING FOR INTERNSHIP</div>
+        <div class="lr-anim bar">LOOKING FOR INTERNSHIP</div>
+        <div class="rl-anim bar">LOOKING FOR INTERNSHIP</div>
+        <div class="rl-anim delay1 bar">LOOKING FOR INTERNSHIP</div>
+        <div class="lr-anim-slow bar">LOOKING FOR INTERNSHIP</div>
+        <div class="rl-anim-slow delay2 bar">LOOKING FOR INTERNSHIP</div>
       </div>
     </div>
   </div>
@@ -56,10 +60,11 @@ import "../css/animation.css";
         text-align: right;
         margin-top: 0;
         color: var(--accent2);
+        z-index: 5;
       }
 
       .links {
-        padding: var(--space-s);
+        padding: var(--space-2xs);
         display: flex;
         flex-direction: column;
         place-items: end;
@@ -91,6 +96,8 @@ import "../css/animation.css";
     }
 
     .box2 {
+      height: 50%;
+      margin-top: auto;
       display: grid;
       z-index: -5;
       place-items: center;
@@ -102,17 +109,20 @@ import "../css/animation.css";
         position: absolute;
       }
       .animcontent {
-        background: var(--gradient8);
+        border-top: solid var(--accent2) 2px;
+        border-bottom: solid var(--accent2) 2px;
         height: 100%;
         width: 100%;
-        > * {
-          z-index: -1;
+
+        .bar {
+          width: 100%;
+          font-family: "Druk Wide Bold Bold";
+          font-size: var(--step-2);
+          color: var(--accent2);
+          text-transform: uppercase;
+          line-break: strict;
+          white-space: nowrap;
         }
-      }
-      .frontgradient {
-        z-index: 10;
-        height: 100%;
-        width: 100%;
       }
     }
     @media (min-width: 900px) {

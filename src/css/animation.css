@@ -1,6 +1,6 @@
 .lr-anim {
   animation-name: left-right-animation;
-  animation-duration: 25s;
+  animation-duration: 10s;
   animation-timing-function: linear;
   animation-delay: 0s;
   animation-iteration-count: infinite;
@@ -8,21 +8,18 @@
 }
 @keyframes left-right-animation {
   0% {
-    transform: translateX(-60vh);
+    transform: translateX(-40vw);
   }
 
-  50% {
-  }
   100% {
-    transform: translateX(65vh);
+    transform: translateX(50vw);
   }
 }
 
 .rl-anim {
   animation-name: right-left-animation;
-  animation-duration: 5s;
+  animation-duration: 10s;
   animation-timing-function: linear;
-  animation-delay: 0.5s;
   animation-iteration-count: infinite;
   animation-fill-mode: both;
 }
@@ -30,16 +27,32 @@
   0% {
     transform: translateX(35vw);
   }
-  50% {
-  }
+
   100% {
-    transform: translateX(-15vw);
+    transform: translateX(-50vw);
+  }
+}
+
+.rl-anim-slow {
+  animation-name: right-left-animation-slow;
+  animation-duration: 25s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+}
+@keyframes right-left-animation-slow {
+  0% {
+    transform: translateX(35vw);
+  }
+
+  100% {
+    transform: translateX(-50vw);
   }
 }
 
 .lr-anim-slow {
   animation-name: left-right-slow-animation;
-  animation-duration: 35s;
+  animation-duration: 25s;
   animation-timing-function: linear;
   animation-delay: 0s;
   animation-iteration-count: infinite;
@@ -49,9 +62,7 @@
   0% {
     transform: translateX(-60vh);
   }
-  /* 50% {
-    transform: translateX(65vh);
-  } */
+
   100% {
     transform: translateX(65vh);
   }
@@ -60,21 +71,24 @@
 .delay1 {
   animation-delay: -2s;
 }
+.delay2 {
+  animation-delay: -1s;
+}
 
 :root {
   --hover: ease 0.2s all;
 }
 
 .in-viewport {
-  animation: fadeInUp 1s ease-out forwards; /* Adjust duration and easing as needed */
+  animation: fadeInUp 1s ease-out forwards;
 }
 @keyframes fadeInUp {
   0% {
     opacity: 0;
-    transform: translateY(2rem); /* Moves the element 2rem down initially */
+    transform: translateY(2rem);
   }
   100% {
     opacity: 1;
-    transform: translateY(0); /* Moves the element to its original position */
+    transform: translateY(0);
   }
 }
