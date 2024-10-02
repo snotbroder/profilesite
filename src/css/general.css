@@ -71,7 +71,7 @@ html {
 
 .display {
   font-family: "STRETCH SANS";
-  font-size: var(--step-7);
+  font-size: var(--step-5);
   text-transform: uppercase;
   -webkit-text-stroke: var(--accent2) 4px;
   color: transparent;
