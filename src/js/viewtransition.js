@@ -17,8 +17,8 @@ function addClassOnScroll(elements, className) {
 
 // Example Usage
 document.addEventListener("DOMContentLoaded", function () {
-  const myElements = document.querySelectorAll("p, .viewable, h2, h6, .profilepic"); // Get all <p> elements
-  const myClass = "in-viewport"; // Class to add
+  const myElements = document.querySelectorAll("p, .viewable, h2, h6, .profilepic");
+  const myClass = "in-viewport";
 
   // Call the function and pass the NodeList
   addClassOnScroll(myElements, myClass);
