@@ -152,7 +152,7 @@ a {
 }
 a:hover,
 a::selection {
-  color: var(--secondary);
+  color: var(--tertiary);
   transition: var(--hover);
 }
 a:active {
