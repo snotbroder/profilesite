@@ -4,79 +4,89 @@ import "../css/animation.css";
 ---
 
 <section class="content flow flow-mobile">
-  <h1 id="about">about</h1>
-  <div class="wrapper grid2-3 flow-mobile">
-    <div class="profilepic">
-      <img src="/profile1.webp" alt="profile of me" />
+  <div class="content-grid">
+    <h1 id="about">about</h1>
+    <div class="wrapper grid2-3 flow-mobile">
+      <div class="profilepic">
+        <img src="/profile1.webp" alt="profile of me" />
+      </div>
+      <div class="txt-wrapper flow-light">
+        <h2>#who am i?</h2>
+        <p>Hello I’m Joris! I’m a student at the Copenhagen School of Design and Technology, aka. KEA. I am currently looking for an internship for my upcoming 4th semester of Multimediadesign AP.</p>
+        <p>I love to code. My favourite part about coding websites is translating designs into a usable interface. This is also why I chose the Frontend-development course for my 3rd semester - to explore and expand my coding skills. This is also what I would expect for this upcoming semester.</p>
+        <p>When not in school, I’m at home in Vesterbro, with my dog and my partner. And if not that, I may be out with my friends talking about pop-culture or having a beer.</p>
+      </div>
     </div>
-    <div class="txt-wrapper flow-light">
-      <h2>#who am i?</h2>
-      <p>Hello I’m Joris! I’m a student at the Copenhagen School of Design and Technology, aka. KEA. I am currently looking for an internship for my upcoming 4th semester of Multimediadesign AP.</p>
-      <p>I love to code. My favourite part about coding websites is translating designs into a usable interface. This is also why I chose the Frontend-development course for my 3rd semester - to explore and expand my coding skills. This is also what I would expect for this upcoming semester.</p>
-      <p>When not in school, I’m at home in Vesterbro, with my dog and my partner. And if not that, I may be out with my friends talking about pop-culture or having a beer.</p>
+    <div class="ff-container">
+      <span class="ff">I love 90's music!</span>
+      <span class="ff">You can't spell fun without frontend development</span>
+      <span class="ff">My favorite meal is tomatosoup on a cold day</span>
     </div>
-  </div>
-  <div class="ff-container">
-    <span class="ff">I love 90's music!</span>
-    <span class="ff">You can't spell fun without frontend development</span>
-    <span class="ff">My favorite meal is tomatosoup on a cold day</span>
-  </div>
-  <script src="/src/js/viewtransition.js"></script>
-  <style>
-    section {
-      background: var(--gradient6);
-      padding: var(--space-2xs) var(--space-s);
-      position: relative;
+    <script src="/src/js/viewtransition.js"></script>
+    <style>
+      section {
+        background: var(--gradient6);
+        padding: var(--space-2xs) var(--space-s);
+        position: relative;
 
-      .wrapper:after {
-        display: block;
-        content: "";
-
-        background: url(/grid3.svg);
-        transform: rotate(90deg);
-        width: 15rem;
-        aspect-ratio: 1/1;
-        position: absolute;
-        top: 11rem;
-        left: -3rem;
-      }
-
-      .profilepic {
-        display: grid;
-        width: fit-content;
-        height: fit-content;
-        border: 2px solid var(--accent1);
-        z-index: 20;
-
-        img {
+        .wrapper:after {
           display: block;
-          object-fit: cover;
-          grid-area: 1/1;
-          aspect-ratio: 1/1;
-          transition: var(--hover);
-          z-index: 10;
-        }
-        &:hover {
-          :first-child {
-            opacity: 0;
-          }
-          background-image: url(/profile2.webp);
-          background-size: cover;
-          aspect-ratio: 1/1;
-          width: fit-content;
-          z-index: 20;
-        }
+          content: "";
 
-        :first-child {
+          background: url(/grid3.svg);
+          transform: rotate(90deg);
+          width: 15rem;
+          aspect-ratio: 1/1;
+          position: absolute;
+          top: 7rem;
+          left: 4rem;
           z-index: 1;
         }
+
+        .profilepic {
+          margin-top: auto;
+          margin-bottom: auto;
+          display: grid;
+          width: fit-content;
+          height: fit-content;
+          border: 2px solid var(--accent1);
+          z-index: 20;
+
+          img {
+            display: block;
+            object-fit: cover;
+            grid-area: 1/1;
+            aspect-ratio: 1/1.2;
+            transition: var(--hover);
+            z-index: 10;
+          }
+          &:hover {
+            :first-child {
+              opacity: 0;
+            }
+            background-image: url(/profile2.webp);
+            background-size: cover;
+            aspect-ratio: 1/1;
+            width: fit-content;
+            z-index: 20;
+          }
+
+          :first-child {
+            z-index: 1;
+          }
+        }
       }
-    }
-    .ff-container {
-      display: none;
-    }
-    .wrapper {
-      gap: var(--space-2xs);
-    }
-  </style>
+      .ff-container {
+        display: none;
+      }
+      .wrapper {
+        gap: var(--space-2xs);
+      }
+      @media (max-width: 900px) {
+        section .wrapper:after {
+          display: none;
+        }
+      }
+    </style>
+  </div>
 </section>
